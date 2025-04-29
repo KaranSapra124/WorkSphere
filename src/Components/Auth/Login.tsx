@@ -15,7 +15,7 @@ const Login = () => {
                         <div className="flex gap-5 flex-col">
                             <input className="p-2 shadow text-primary font-semibold" placeholder="Enter Your Email..." type="email" name="" id="" />
                             <input className="p-2 shadow text-primary font-semibold" placeholder="Enter Your Password..." type="password" name="" id="" />
-                            <button className="bg-primary text-white py-1 px-8 lg:text-lg text-sm cursor-pointer hover:scale-105 transition-all rounded-l-full rounded-r-full">Log in</button>
+                            <button className="bg-primary text-white py-1 px-8 lg:text-lg text-sm cursor-pointer hover:scale-105 hover:shadow-lg transition-all rounded-l-full rounded-r-full">Log in</button>
                         </div>
                     </div>
                 </div>
