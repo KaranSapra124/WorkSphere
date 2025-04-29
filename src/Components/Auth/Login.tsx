@@ -4,9 +4,9 @@ const Login = () => {
     return (
         <>
             <div>
-                <div>
-                    <h1>Welcome My Friend!</h1>
-                    <p> Please log in to WorkSphere and experience seamless HR management at your fingertips.</p>
+                <div className="bg-primary">
+                    <h1 className="text-white font-bold">Welcome My Friend!</h1>
+                    <p className="text-white"> Please log in to WorkSphere and experience seamless HR management at your fingertips.</p>
                     <Link to={"/"}>Sign Up</Link>
                 </div>
                 <div>
