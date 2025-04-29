@@ -10,7 +10,15 @@ const Login = () => {
                     <Link to={"/"}>Sign Up</Link>
                 </div>
                 <div>
+                    <h1>Create An Account</h1>
+                    <div>
 
+                    </div>
+                    <div>
+                        <input type="email" name="" id="" />
+                        <input type="password" name="" id="" />
+                        <button>Log in</button>
+                    </div>
                 </div>
             </div>
         </>
