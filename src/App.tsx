@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import Login from './Components/Auth/Login'
 import Dashboard from './Layout/Dashboard'
+import AdminDashboard from './Pages/Admin/DashboardPage'
 
 function App() {
   const routes = createBrowserRouter([
@@ -15,7 +16,13 @@ function App() {
     },
     {
       path:"/",
-      element:<Dashboard/>
+      element:<Dashboard/>,
+      children:[
+        {
+          path:"/",
+          element:<AdminDashboard/>
+        }
+      ]
     }
   ])
   return (
