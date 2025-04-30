@@ -6,12 +6,16 @@ function App() {
   const routes = createBrowserRouter([
     {
       path: "/login",
-      element: <Login />
+      element: <Login isLogin={true} />
+    },
+    {
+      path: "/sign-up",
+      element: <Login isLogin={false} />
     }
   ])
   return (
     <>
-<RouterProvider router={routes}/>
+      <RouterProvider router={routes} />
     </>
   )
 }
