@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import Login from './Components/Auth/Login'
-import Dashboard from './Components/Dashboard/Dashboard'
+import Dashboard from './Layout/Dashboard'
 
 function App() {
   const routes = createBrowserRouter([
