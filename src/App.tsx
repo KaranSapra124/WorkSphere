@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import Login from './Components/Auth/Login'
+import Dashboard from './Components/Dashboard/Dashboard'
 
 function App() {
   const routes = createBrowserRouter([
@@ -11,6 +12,10 @@ function App() {
     {
       path: "/sign-up",
       element: <Login isLogin={false} />
+    },
+    {
+      path:"/",
+      element:<Dashboard/>
     }
   ])
   return (
