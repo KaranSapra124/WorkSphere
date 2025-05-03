@@ -59,7 +59,7 @@ const CompanyRevenue = () => {
         }
     };
     return (
-<div className='shadow'>
+<div className='shadow h-full'>
 
 <Chart options={columnChartOptions} series={columnChartSeries} type="bar" height={350} />
 </div>

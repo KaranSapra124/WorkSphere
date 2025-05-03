@@ -1,4 +1,3 @@
-import React from 'react'
 import DashboardCards, { dashboardCard } from '../../Components/Dashboard/DashboardCards';
 import CompanyRevenue from '../../Components/Dashboard/Charts/CompanyRevenue';
 import CompanyPayBreakdownChart from '../../Components/Dashboard/Charts/CompanyPay';
@@ -38,12 +37,12 @@ const AdminDashboard = () => {
     ];
     return (
         <>
-            <div className=' w-full'>
+            <div className=' w-full '>
 
-                <div className='flex w-full'>
+                <div className='flex w-full '>
                     {dashboardCards?.map((elem: dashboardCard, index: number) => <DashboardCards data={elem} />)}
                 </div>
-                <div className='w-full gap-4 items-center grid grid-cols-2'>
+                <div className='w-full my-2 mx-2 gap-4 items-center grid grid-cols-2'>
                     <CompanyRevenue />
                     <CompanyPayBreakdownChart/>
                 </div>

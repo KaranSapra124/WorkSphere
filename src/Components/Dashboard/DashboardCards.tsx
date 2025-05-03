@@ -12,7 +12,7 @@ const DashboardCards: React.FC<{ data: dashboardCard }> = ({ data }) => {
 
     return (
         <>
-            <div className='flex gap-2 m-2 rounded shadow-black h-fit w-full p-2 shadow '>
+            <div className='flex gap-2 m-2 rounded  h-fit w-full p-2 shadow '>
                 <h1 className='bg-primary/80 rounded p-4 '>{data?.icon}</h1>
                 <div >
                     <h3 className='lg:text-3xl font-bold text-xl'>{data?.value}</h3>
