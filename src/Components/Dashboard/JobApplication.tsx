@@ -53,13 +53,13 @@ const JobApplication = () => {
     const [jobApplicantsData, setJobApplicantsData] = useState<JobApplicant[]>(jobApplicants)
     const [status, setStatus] = useState<ApplicantStatus[]>(["Pending", "Accepted", "Rejected"])
     return (
-        <div className='h-full'>
-            <h1>Job Applications</h1>
-            <div className='flex flex-col gap-3 my-2'>
+        <div className=' w-full shadow p-2'>
+            <h1 className='text-gray-700 font-semibold'>Job Applications</h1>
+            <div className='flex flex-col gap-2  my-2'>
                 {
                     jobApplicantsData?.map((elem: JobApplicant, index: number) => {
                         return <>
-                            <div className='flex gap-4'>
+                            <div className='flex gap-4 justify-between'>
                                 <div className='flex gap-2'>
                                     <img className='rounded-full w-10' src={elem?.image} alt={elem?.name} />
                                     <div>
@@ -67,17 +67,27 @@ const JobApplication = () => {
                                         <p className='text-gray-500 text-sm font-semibold'>{elem?.role}</p>
                                     </div>
                                 </div>
-                                <select defaultValue="Pick a color" className="w-52 shadow rounded shadow-gray-500 p-2">
+                                <select onChange={(e) => {
+                                    setJobApplicantsData((prev, currIndex: number) => {
+                                        return prev.filter((user: JobApplicant, dataIndex: number) => {
+                                            if (dataIndex === index) {
+                                                return { ...user, status: e.target.value }
+                                            } else {
+                                                return user
+                                            }
+                                        })
+                                    })
+                                }} defaultValue="Pick a color" className="w-52 shadow rounded text-sm shadow-gray-500 p-2">
                                     {status?.map((elem, index) => {
-                                        return <option>{elem}</option>
+                                        return <option className='text-sm'>{elem}</option>
                                     })}
                                 </select>
-                            </div>
+                            </div >
                         </>
                     })
                 }
             </div>
-        </div>
+        </div >
     )
 }
 
