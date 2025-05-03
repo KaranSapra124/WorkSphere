@@ -59,8 +59,10 @@ const CompanyRevenue = () => {
         }
     };
     return (
+<div className='shadow'>
 
-        <Chart options={columnChartOptions} series={columnChartSeries} type="bar" height={350} />
+<Chart options={columnChartOptions} series={columnChartSeries} type="bar" height={350} />
+</div>
 
     )
 }

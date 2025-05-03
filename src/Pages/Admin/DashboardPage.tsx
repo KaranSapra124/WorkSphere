@@ -43,7 +43,7 @@ const AdminDashboard = () => {
                 <div className='flex w-full'>
                     {dashboardCards?.map((elem: dashboardCard, index: number) => <DashboardCards data={elem} />)}
                 </div>
-                <div className='w-full flex'>
+                <div className='w-full gap-4 items-center grid grid-cols-2'>
                     <CompanyRevenue />
                     <CompanyPayBreakdownChart/>
                 </div>
