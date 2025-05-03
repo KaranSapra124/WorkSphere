@@ -7,6 +7,7 @@ const JobApplication = () => {
         id: string;
         name: string;
         image: string;
+        email?: string;
         role: string;
         status: ApplicantStatus;
     }
@@ -50,23 +51,32 @@ const JobApplication = () => {
     ];
 
     const [jobApplicantsData, setJobApplicantsData] = useState<JobApplicant[]>(jobApplicants)
-
+    const [status, setStatus] = useState<ApplicantStatus[]>(["Pending", "Accepted", "Rejected"])
     return (
-        <div>
+        <div className='h-full'>
             <h1>Job Applications</h1>
-            {
-                jobApplicantsData?.map((elem: JobApplicant, index: number) => {
-                    return <>
-                        <div className='flex gap-4'>
-                            <img className='rounded-full w-52' src={elem?.image} alt={elem?.name} />
-                            <div>
-                                <h2>{elem?.name}</h2>
-                                <p>{elem?.role}</p>
+            <div className='flex flex-col gap-3 my-2'>
+                {
+                    jobApplicantsData?.map((elem: JobApplicant, index: number) => {
+                        return <>
+                            <div className='flex gap-4'>
+                                <div className='flex gap-2'>
+                                    <img className='rounded-full w-10' src={elem?.image} alt={elem?.name} />
+                                    <div>
+                                        <h2 className='text-gray-800 font-semibold'>{elem?.name}</h2>
+                                        <p className='text-gray-500 text-sm font-semibold'>{elem?.role}</p>
+                                    </div>
+                                </div>
+                                <select defaultValue="Pick a color" className="w-52 shadow rounded shadow-gray-500 p-2">
+                                    {status?.map((elem, index) => {
+                                        return <option>{elem}</option>
+                                    })}
+                                </select>
                             </div>
-                        </div>
-                    </>
-                })
-            }
+                        </>
+                    })
+                }
+            </div>
         </div>
     )
 }

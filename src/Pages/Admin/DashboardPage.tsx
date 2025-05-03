@@ -1,6 +1,7 @@
 import DashboardCards, { dashboardCard } from '../../Components/Dashboard/DashboardCards';
 import CompanyRevenue from '../../Components/Dashboard/Charts/CompanyRevenue';
 import CompanyPayBreakdownChart from '../../Components/Dashboard/Charts/CompanyPay';
+import JobApplication from '../../Components/Dashboard/JobApplication';
 
 const AdminDashboard = () => {
 
@@ -42,10 +43,11 @@ const AdminDashboard = () => {
                 <div className='flex w-full '>
                     {dashboardCards?.map((elem: dashboardCard, index: number) => <DashboardCards data={elem} />)}
                 </div>
-                <div className=' h-96 my-2 mx-2 gap-1 items-center grid grid-cols-2'>
+                <div className='  my-2 mx-2 gap-1 items-center grid grid-cols-2'>
                     <CompanyRevenue />
                     <CompanyPayBreakdownChart/>
                 </div>
+                <JobApplication/>
             </div>
         </>
     )
