@@ -15,12 +15,12 @@ function App() {
       element: <Login isLogin={false} />
     },
     {
-      path:"/",
-      element:<Dashboard/>,
-      children:[
+      path: "/",
+      element: <Dashboard />,
+      children: [
         {
-          path:"/",
-          element:<AdminDashboard/>
+          path: "/",
+          element: <AdminDashboard />
         }
       ]
     }
