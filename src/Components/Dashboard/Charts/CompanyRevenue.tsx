@@ -60,6 +60,7 @@ const CompanyRevenue = () => {
     };
     return (
 <div className='shadow h-full w-full'>
+<h1 className='text-gray-500 font-semibold p-2'>Company Performance</h1>
 
 <Chart options={columnChartOptions} series={columnChartSeries} type="bar" height={350} />
 </div>

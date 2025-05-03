@@ -37,7 +37,7 @@ const AdminDashboard = () => {
     ];
     return (
         <>
-            <div className=' w-full '>
+            <div className=' w-full px-10 py-4'>
 
                 <div className='flex w-full '>
                     {dashboardCards?.map((elem: dashboardCard, index: number) => <DashboardCards data={elem} />)}
