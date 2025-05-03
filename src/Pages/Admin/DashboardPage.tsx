@@ -1,7 +1,11 @@
 import React from 'react'
 import DashboardCards, { dashboardCard } from '../../Components/Dashboard/DashboardCards';
+import CompanyRevenue from '../../Components/Dashboard/Charts/CompanyRevenue';
+import CompanyPayBreakdownChart from '../../Components/Dashboard/Charts/CompanyPay';
 
 const AdminDashboard = () => {
+
+
     const dashboardCards: dashboardCard[] = [
         {
             title: "Total Employees",
@@ -34,8 +38,16 @@ const AdminDashboard = () => {
     ];
     return (
         <>
-                {dashboardCards?.map((elem: dashboardCard, index: number) => <DashboardCards data={elem} />)}
-      
+            <div className=' w-full'>
+
+                <div className='flex w-full'>
+                    {dashboardCards?.map((elem: dashboardCard, index: number) => <DashboardCards data={elem} />)}
+                </div>
+                <div className='w-full flex'>
+                    <CompanyRevenue />
+                    <CompanyPayBreakdownChart/>
+                </div>
+            </div>
         </>
     )
 }
