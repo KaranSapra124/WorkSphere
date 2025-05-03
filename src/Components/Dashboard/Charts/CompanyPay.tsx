@@ -5,6 +5,7 @@ import { ApexOptions } from 'apexcharts';
 const options: ApexOptions = {
     chart: {
         type: 'donut',
+        // width: 220
     },
     labels: [
         'Salary',
@@ -42,6 +43,7 @@ const series = [60, 10, 8, 7, 5, 10]; // Total = 100%
 const CompanyPayBreakdownChart = () => {
     return (
         <div className="w-full h-full shadow my-auto  mx-auto">
+            <h1 className='text-gray-500 font-semibold p-2'>Company Pay</h1>
             <ReactApexChart options={options} series={series} type="donut" height={350} />
             <div className='flex justify-between py-2 px-2 border-t border-gray-200'>
                 <p className='text-gray-500 font-semibold'>Get Report!</p>
