@@ -68,7 +68,7 @@ const JobApplication = () => {
                                     </div>
                                 </div>
                                 <select onChange={(e) => {
-                                    setJobApplicantsData((prev, currIndex: number) => {
+                                    setJobApplicantsData((prev: any, currIndex: number) => {
                                         return prev.filter((user: JobApplicant, dataIndex: number) => {
                                             if (dataIndex === index) {
                                                 return { ...user, status: e.target.value }
